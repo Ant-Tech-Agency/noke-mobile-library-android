@@ -1335,7 +1335,7 @@ public class NokeDeviceManagerService extends Service {
     private void uploadDataCallback(String s) {
         try {
             JSONObject obj = new JSONObject(s);
-            int errorCode = obj.getInt("error_code");
+            int errorCode = obj.getInt("errorCode");
             String message = obj.getString("message");
 
             if (errorCode == NokeMobileError.SUCCESS) {
