@@ -1232,6 +1232,10 @@ public class NokeDeviceManagerService extends Service {
      */
 
     void writeRXCharacteristic(NokeDevice noke) {
+        if (mBluetoothAdapter == null || noke.gatt == null) {
+            return;
+        }
+
         BluetoothGattService RxService = noke.gatt.getService(NokeDefines.RX_SERVICE_UUID);
         if (noke.gatt == null) {
             return;
