@@ -1227,7 +1227,7 @@ public class NokeDeviceManagerService extends Service {
 
     /**
      * Write RX characteristic on Noke device.
-     *
+     * check gatt
      * @param noke Noke device
      */
 
